@@ -1,6 +1,6 @@
 [project]
 name = "upgradelink-api-python"
-version = "1.0.0"
+version = "1.0.1"
 description = "upgradelink-api-python"
 authors = [
     {name = "toolsetlink",email = "toolsetlink@163.com"}
