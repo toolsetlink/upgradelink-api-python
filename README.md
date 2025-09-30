@@ -52,3 +52,20 @@ python -m unittest tests.test_client.TestUpgradeLinkClient.test_get_url_upgrade
 - 运行测试前请确保已正确安装所有依赖
 - 测试使用了跳过机制，即使在缺少依赖的情况下也能显示测试结构
 - 详细的依赖安装说明已在 README 中提供
+
+## 使用示例
+项目根目录下的 `example_usage.py` 文件提供了完整的API调用示例，包括：
+
+1. 客户端初始化
+2. URL升级API调用
+3. 文件升级API调用
+4. APK升级API调用
+5. 配置升级API调用
+6. 应用报告API调用
+
+### 运行示例
+```bash
+python example_usage.py
+```
+
+注意：运行前请在示例文件中替换占位符为您的实际参数（如AccessKey、AccessSecret等）。

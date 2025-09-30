@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 # This file is auto-generated, don't edit it. Thanks.
-from tea.model import TeaModel
+from Tea.model import TeaModel
 from typing import Any
 
 

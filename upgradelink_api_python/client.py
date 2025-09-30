@@ -2,9 +2,9 @@
 # This file is auto-generated, don't edit it. Thanks.
 import time
 
-from tea.request import TeaRequest
-from tea.exceptions import TeaException, UnretryableException
-from tea.core import TeaCore
+from Tea.request import TeaRequest
+from Tea.exceptions import TeaException, UnretryableException
+from Tea.core import TeaCore
 
 from upgradelink_api_python import models as upgrade_link_models
 from alibabacloud_tea_util.client import Client as UtilClient
