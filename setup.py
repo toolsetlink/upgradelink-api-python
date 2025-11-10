@@ -36,7 +36,11 @@ AUTHOR = "upgradelink-api SDK"
 AUTHOR_EMAIL = "toolsetlink@163.com"
 URL = "https://github.com/toolsetlink/upgradelink-api-python"
 VERSION = __import__(PACKAGE).__version__
-REQUIRES = 
+REQUIRES = [
+    "alibabacloud-tea>=0.2.0",
+    "alibabacloud-tea-util>=0.3.0",
+    "darabonba-base-python>=0.0.1"
+]
 
 LONG_DESCRIPTION = ''
 if os.path.exists('./README.md'):
