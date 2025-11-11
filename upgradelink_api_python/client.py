@@ -2241,3 +2241,7 @@ class Client:
                     continue
                 raise e
         raise UnretryableException(_last_request, _last_exception)
+
+    @staticmethod
+    def time_rfc3339() -> str:
+        return DarabonbaBaseClient.time_rfc3339()

@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 """
 setup module for upgradelink-api-python.
 
-Created on 05/11/2025
+Created on 11/11/2025
 
 @author: upgradelink-api SDK
 """

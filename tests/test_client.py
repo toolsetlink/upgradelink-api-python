@@ -199,7 +199,7 @@ class TestUpgradeLinkClient(unittest.TestCase):
             dev_model_key = ""
             dev_key = ""
             version_code = 1
-            timestamp = DarabonbaBaseClient.time_rfc3339()
+            timestamp = Client.time_rfc3339()
             
             # 构建事件数据
             event_data = upgrade_link_models.AppReportRequestEventData(
