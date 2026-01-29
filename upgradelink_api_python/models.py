@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 # This file is auto-generated, don't edit it. Thanks.
 from Tea.model import TeaModel
-from typing import Any
+from typing import Any, List
 
 
 class Config(TeaModel):
@@ -2761,6 +2761,617 @@ class AppReportRequest(TeaModel):
 
 
 class AppReportResponse(TeaModel):
+    def __init__(
+        self,
+        code: int = None,
+        msg: str = None,
+        docs: str = None,
+        trace_id: str = None,
+    ):
+        self.code = code
+        self.msg = msg
+        self.docs = docs
+        self.trace_id = trace_id
+
+    def validate(self):
+        self.validate_required(self.code, 'code')
+        self.validate_required(self.msg, 'msg')
+        self.validate_required(self.docs, 'docs')
+        self.validate_required(self.trace_id, 'trace_id')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.code is not None:
+            result['code'] = self.code
+        if self.msg is not None:
+            result['msg'] = self.msg
+        if self.docs is not None:
+            result['docs'] = self.docs
+        if self.trace_id is not None:
+            result['traceId'] = self.trace_id
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('code') is not None:
+            self.code = m.get('code')
+        if m.get('msg') is not None:
+            self.msg = m.get('msg')
+        if m.get('docs') is not None:
+            self.docs = m.get('docs')
+        if m.get('traceId') is not None:
+            self.trace_id = m.get('traceId')
+        return self
+
+
+class AppStatisticsInfoRequest(TeaModel):
+    def __init__(
+        self,
+        app_key: str = None,
+    ):
+        self.app_key = app_key
+
+    def validate(self):
+        self.validate_required(self.app_key, 'app_key')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.app_key is not None:
+            result['appKey'] = self.app_key
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('appKey') is not None:
+            self.app_key = m.get('appKey')
+        return self
+
+
+class DownloadCount7DayInfo(TeaModel):
+    def __init__(
+        self,
+        time_data: str = None,
+        data: int = None,
+    ):
+        self.time_data = time_data
+        self.data = data
+
+    def validate(self):
+        self.validate_required(self.time_data, 'time_data')
+        self.validate_required(self.data, 'data')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.time_data is not None:
+            result['timeData'] = self.time_data
+        if self.data is not None:
+            result['data'] = self.data
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('timeData') is not None:
+            self.time_data = m.get('timeData')
+        if m.get('data') is not None:
+            self.data = m.get('data')
+        return self
+
+
+class AppGetStrategyCount7DayInfo(TeaModel):
+    def __init__(
+        self,
+        time_data: str = None,
+        data: int = None,
+    ):
+        self.time_data = time_data
+        self.data = data
+
+    def validate(self):
+        self.validate_required(self.time_data, 'time_data')
+        self.validate_required(self.data, 'data')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.time_data is not None:
+            result['timeData'] = self.time_data
+        if self.data is not None:
+            result['data'] = self.data
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('timeData') is not None:
+            self.time_data = m.get('timeData')
+        if m.get('data') is not None:
+            self.data = m.get('data')
+        return self
+
+
+class AppUpgradeCount7DayInfo(TeaModel):
+    def __init__(
+        self,
+        time_data: str = None,
+        data: int = None,
+    ):
+        self.time_data = time_data
+        self.data = data
+
+    def validate(self):
+        self.validate_required(self.time_data, 'time_data')
+        self.validate_required(self.data, 'data')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.time_data is not None:
+            result['timeData'] = self.time_data
+        if self.data is not None:
+            result['data'] = self.data
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('timeData') is not None:
+            self.time_data = m.get('timeData')
+        if m.get('data') is not None:
+            self.data = m.get('data')
+        return self
+
+
+class AppStartCount7DayInfo(TeaModel):
+    def __init__(
+        self,
+        time_data: str = None,
+        data: int = None,
+    ):
+        self.time_data = time_data
+        self.data = data
+
+    def validate(self):
+        self.validate_required(self.time_data, 'time_data')
+        self.validate_required(self.data, 'data')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.time_data is not None:
+            result['timeData'] = self.time_data
+        if self.data is not None:
+            result['data'] = self.data
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('timeData') is not None:
+            self.time_data = m.get('timeData')
+        if m.get('data') is not None:
+            self.data = m.get('data')
+        return self
+
+
+class AppStatisticsInfoDataResponse(TeaModel):
+    def __init__(
+        self,
+        yesterday_download_count: int = None,
+        total_download_count: int = None,
+        yesterday_app_get_strategy_count: int = None,
+        total_app_get_strategy_count: int = None,
+        yesterday_app_upgrade_count: int = None,
+        total_app_upgrade_count: int = None,
+        yesterday_app_start_count: int = None,
+        total_app_start_count: int = None,
+        download_count_7day: List[DownloadCount7DayInfo] = None,
+        app_get_strategy_count_7day: List[AppGetStrategyCount7DayInfo] = None,
+        app_upgrade_count_7day: List[AppUpgradeCount7DayInfo] = None,
+        app_start_count_7day: List[AppStartCount7DayInfo] = None,
+    ):
+        self.yesterday_download_count = yesterday_download_count
+        self.total_download_count = total_download_count
+        self.yesterday_app_get_strategy_count = yesterday_app_get_strategy_count
+        self.total_app_get_strategy_count = total_app_get_strategy_count
+        self.yesterday_app_upgrade_count = yesterday_app_upgrade_count
+        self.total_app_upgrade_count = total_app_upgrade_count
+        self.yesterday_app_start_count = yesterday_app_start_count
+        self.total_app_start_count = total_app_start_count
+        self.download_count_7day = download_count_7day
+        self.app_get_strategy_count_7day = app_get_strategy_count_7day
+        self.app_upgrade_count_7day = app_upgrade_count_7day
+        self.app_start_count_7day = app_start_count_7day
+
+    def validate(self):
+        self.validate_required(self.yesterday_download_count, 'yesterday_download_count')
+        self.validate_required(self.total_download_count, 'total_download_count')
+        self.validate_required(self.yesterday_app_get_strategy_count, 'yesterday_app_get_strategy_count')
+        self.validate_required(self.total_app_get_strategy_count, 'total_app_get_strategy_count')
+        self.validate_required(self.yesterday_app_upgrade_count, 'yesterday_app_upgrade_count')
+        self.validate_required(self.total_app_upgrade_count, 'total_app_upgrade_count')
+        self.validate_required(self.yesterday_app_start_count, 'yesterday_app_start_count')
+        self.validate_required(self.total_app_start_count, 'total_app_start_count')
+        self.validate_required(self.download_count_7day, 'download_count_7day')
+        if self.download_count_7day:
+            for k in self.download_count_7day:
+                if k:
+                    k.validate()
+        self.validate_required(self.app_get_strategy_count_7day, 'app_get_strategy_count_7day')
+        if self.app_get_strategy_count_7day:
+            for k in self.app_get_strategy_count_7day:
+                if k:
+                    k.validate()
+        self.validate_required(self.app_upgrade_count_7day, 'app_upgrade_count_7day')
+        if self.app_upgrade_count_7day:
+            for k in self.app_upgrade_count_7day:
+                if k:
+                    k.validate()
+        self.validate_required(self.app_start_count_7day, 'app_start_count_7day')
+        if self.app_start_count_7day:
+            for k in self.app_start_count_7day:
+                if k:
+                    k.validate()
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.yesterday_download_count is not None:
+            result['yesterdayDownloadCount'] = self.yesterday_download_count
+        if self.total_download_count is not None:
+            result['totalDownloadCount'] = self.total_download_count
+        if self.yesterday_app_get_strategy_count is not None:
+            result['yesterdayAppGetStrategyCount'] = self.yesterday_app_get_strategy_count
+        if self.total_app_get_strategy_count is not None:
+            result['totalAppGetStrategyCount'] = self.total_app_get_strategy_count
+        if self.yesterday_app_upgrade_count is not None:
+            result['yesterdayAppUpgradeCount'] = self.yesterday_app_upgrade_count
+        if self.total_app_upgrade_count is not None:
+            result['totalAppUpgradeCount'] = self.total_app_upgrade_count
+        if self.yesterday_app_start_count is not None:
+            result['yesterdayAppStartCount'] = self.yesterday_app_start_count
+        if self.total_app_start_count is not None:
+            result['totalAppStartCount'] = self.total_app_start_count
+        result['downloadCount7Day'] = []
+        if self.download_count_7day is not None:
+            for k in self.download_count_7day:
+                result['downloadCount7Day'].append(k.to_map() if k else None)
+        result['appGetStrategyCount7Day'] = []
+        if self.app_get_strategy_count_7day is not None:
+            for k in self.app_get_strategy_count_7day:
+                result['appGetStrategyCount7Day'].append(k.to_map() if k else None)
+        result['appUpgradeCount7Day'] = []
+        if self.app_upgrade_count_7day is not None:
+            for k in self.app_upgrade_count_7day:
+                result['appUpgradeCount7Day'].append(k.to_map() if k else None)
+        result['appStartCount7Day'] = []
+        if self.app_start_count_7day is not None:
+            for k in self.app_start_count_7day:
+                result['appStartCount7Day'].append(k.to_map() if k else None)
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('yesterdayDownloadCount') is not None:
+            self.yesterday_download_count = m.get('yesterdayDownloadCount')
+        if m.get('totalDownloadCount') is not None:
+            self.total_download_count = m.get('totalDownloadCount')
+        if m.get('yesterdayAppGetStrategyCount') is not None:
+            self.yesterday_app_get_strategy_count = m.get('yesterdayAppGetStrategyCount')
+        if m.get('totalAppGetStrategyCount') is not None:
+            self.total_app_get_strategy_count = m.get('totalAppGetStrategyCount')
+        if m.get('yesterdayAppUpgradeCount') is not None:
+            self.yesterday_app_upgrade_count = m.get('yesterdayAppUpgradeCount')
+        if m.get('totalAppUpgradeCount') is not None:
+            self.total_app_upgrade_count = m.get('totalAppUpgradeCount')
+        if m.get('yesterdayAppStartCount') is not None:
+            self.yesterday_app_start_count = m.get('yesterdayAppStartCount')
+        if m.get('totalAppStartCount') is not None:
+            self.total_app_start_count = m.get('totalAppStartCount')
+        self.download_count_7day = []
+        if m.get('downloadCount7Day') is not None:
+            for k in m.get('downloadCount7Day'):
+                temp_model = DownloadCount7DayInfo()
+                self.download_count_7day.append(temp_model.from_map(k))
+        self.app_get_strategy_count_7day = []
+        if m.get('appGetStrategyCount7Day') is not None:
+            for k in m.get('appGetStrategyCount7Day'):
+                temp_model = AppGetStrategyCount7DayInfo()
+                self.app_get_strategy_count_7day.append(temp_model.from_map(k))
+        self.app_upgrade_count_7day = []
+        if m.get('appUpgradeCount7Day') is not None:
+            for k in m.get('appUpgradeCount7Day'):
+                temp_model = AppUpgradeCount7DayInfo()
+                self.app_upgrade_count_7day.append(temp_model.from_map(k))
+        self.app_start_count_7day = []
+        if m.get('appStartCount7Day') is not None:
+            for k in m.get('appStartCount7Day'):
+                temp_model = AppStartCount7DayInfo()
+                self.app_start_count_7day.append(temp_model.from_map(k))
+        return self
+
+
+class AppStatisticsInfoResponse(TeaModel):
+    def __init__(
+        self,
+        code: int = None,
+        msg: str = None,
+        trace_id: str = None,
+        data: AppStatisticsInfoDataResponse = None,
+    ):
+        self.code = code
+        self.msg = msg
+        self.trace_id = trace_id
+        self.data = data
+
+    def validate(self):
+        self.validate_required(self.code, 'code')
+        self.validate_required(self.msg, 'msg')
+        self.validate_required(self.trace_id, 'trace_id')
+        self.validate_required(self.data, 'data')
+        if self.data:
+            self.data.validate()
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.code is not None:
+            result['code'] = self.code
+        if self.msg is not None:
+            result['msg'] = self.msg
+        if self.trace_id is not None:
+            result['traceId'] = self.trace_id
+        if self.data is not None:
+            result['data'] = self.data.to_map()
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('code') is not None:
+            self.code = m.get('code')
+        if m.get('msg') is not None:
+            self.msg = m.get('msg')
+        if m.get('traceId') is not None:
+            self.trace_id = m.get('traceId')
+        if m.get('data') is not None:
+            temp_model = AppStatisticsInfoDataResponse()
+            self.data = temp_model.from_map(m['data'])
+        return self
+
+
+class TauriActionUploadRequest(TeaModel):
+    def __init__(
+        self,
+        app_key: str = None,
+        latest_json_url: str = None,
+    ):
+        self.app_key = app_key
+        self.latest_json_url = latest_json_url
+
+    def validate(self):
+        self.validate_required(self.app_key, 'app_key')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.app_key is not None:
+            result['appKey'] = self.app_key
+        if self.latest_json_url is not None:
+            result['latestJsonUrl'] = self.latest_json_url
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('appKey') is not None:
+            self.app_key = m.get('appKey')
+        if m.get('latestJsonUrl') is not None:
+            self.latest_json_url = m.get('latestJsonUrl')
+        return self
+
+
+class TauriActionUploadResponse(TeaModel):
+    def __init__(
+        self,
+        code: int = None,
+        msg: str = None,
+        docs: str = None,
+        trace_id: str = None,
+    ):
+        self.code = code
+        self.msg = msg
+        self.docs = docs
+        self.trace_id = trace_id
+
+    def validate(self):
+        self.validate_required(self.code, 'code')
+        self.validate_required(self.msg, 'msg')
+        self.validate_required(self.docs, 'docs')
+        self.validate_required(self.trace_id, 'trace_id')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.code is not None:
+            result['code'] = self.code
+        if self.msg is not None:
+            result['msg'] = self.msg
+        if self.docs is not None:
+            result['docs'] = self.docs
+        if self.trace_id is not None:
+            result['traceId'] = self.trace_id
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('code') is not None:
+            self.code = m.get('code')
+        if m.get('msg') is not None:
+            self.msg = m.get('msg')
+        if m.get('docs') is not None:
+            self.docs = m.get('docs')
+        if m.get('traceId') is not None:
+            self.trace_id = m.get('traceId')
+        return self
+
+
+class FileActionUploadRequest(TeaModel):
+    def __init__(
+        self,
+        app_key: str = None,
+        latest_json_url: str = None,
+    ):
+        self.app_key = app_key
+        self.latest_json_url = latest_json_url
+
+    def validate(self):
+        self.validate_required(self.app_key, 'app_key')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.app_key is not None:
+            result['appKey'] = self.app_key
+        if self.latest_json_url is not None:
+            result['latestJsonUrl'] = self.latest_json_url
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('appKey') is not None:
+            self.app_key = m.get('appKey')
+        if m.get('latestJsonUrl') is not None:
+            self.latest_json_url = m.get('latestJsonUrl')
+        return self
+
+
+class FileActionUploadResponse(TeaModel):
+    def __init__(
+        self,
+        code: int = None,
+        msg: str = None,
+        docs: str = None,
+        trace_id: str = None,
+    ):
+        self.code = code
+        self.msg = msg
+        self.docs = docs
+        self.trace_id = trace_id
+
+    def validate(self):
+        self.validate_required(self.code, 'code')
+        self.validate_required(self.msg, 'msg')
+        self.validate_required(self.docs, 'docs')
+        self.validate_required(self.trace_id, 'trace_id')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.code is not None:
+            result['code'] = self.code
+        if self.msg is not None:
+            result['msg'] = self.msg
+        if self.docs is not None:
+            result['docs'] = self.docs
+        if self.trace_id is not None:
+            result['traceId'] = self.trace_id
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('code') is not None:
+            self.code = m.get('code')
+        if m.get('msg') is not None:
+            self.msg = m.get('msg')
+        if m.get('docs') is not None:
+            self.docs = m.get('docs')
+        if m.get('traceId') is not None:
+            self.trace_id = m.get('traceId')
+        return self
+
+
+class ApkActionUploadRequest(TeaModel):
+    def __init__(
+        self,
+        app_key: str = None,
+        version: str = None,
+        url: str = None,
+        prompt_upgrade_content: str = None,
+    ):
+        self.app_key = app_key
+        self.version = version
+        self.url = url
+        self.prompt_upgrade_content = prompt_upgrade_content
+
+    def validate(self):
+        self.validate_required(self.app_key, 'app_key')
+        self.validate_required(self.version, 'version')
+        self.validate_required(self.url, 'url')
+
+    def to_map(self):
+        _map = super().to_map()
+        if _map is not None:
+            return _map
+
+        result = dict()
+        if self.app_key is not None:
+            result['appKey'] = self.app_key
+        if self.version is not None:
+            result['version'] = self.version
+        if self.url is not None:
+            result['url'] = self.url
+        if self.prompt_upgrade_content is not None:
+            result['promptUpgradeContent'] = self.prompt_upgrade_content
+        return result
+
+    def from_map(self, m: dict = None):
+        m = m or dict()
+        if m.get('appKey') is not None:
+            self.app_key = m.get('appKey')
+        if m.get('version') is not None:
+            self.version = m.get('version')
+        if m.get('url') is not None:
+            self.url = m.get('url')
+        if m.get('promptUpgradeContent') is not None:
+            self.prompt_upgrade_content = m.get('promptUpgradeContent')
+        return self
+
+
+class ApkActionUploadResponse(TeaModel):
     def __init__(
         self,
         code: int = None,

@@ -24,7 +24,7 @@ from setuptools import setup, find_packages
 """
 setup module for upgradelink-api-python.
 
-Created on 11/11/2025
+Created on 29/01/2026
 
 @author: upgradelink-api SDK
 """
@@ -36,11 +36,7 @@ AUTHOR = "upgradelink-api SDK"
 AUTHOR_EMAIL = "toolsetlink@163.com"
 URL = "https://github.com/toolsetlink/upgradelink-api-python"
 VERSION = __import__(PACKAGE).__version__
-REQUIRES = [
-    "alibabacloud-tea>=0.2.0",
-    "alibabacloud-tea-util>=0.3.0",
-    "darabonba-base-python>=0.0.1"
-]
+REQUIRES = 
 
 LONG_DESCRIPTION = ''
 if os.path.exists('./README.md'):

@@ -235,6 +235,37 @@ class TestUpgradeLinkClient(unittest.TestCase):
         except Exception as e:
             print(f"测试过程中出错: {e}")
 
+    def test_tauri_action_upload(self):
+        """测试tauri_action_upload"""
+        try:
+            # 创建客户端
+            client = Client(self.config)
+
+            # 设置请求参数
+            app_key = "a0jtz0HUwL66r7gCGvbMKQ"
+            latest_json_url = "https://github.com/toolsetlink/tauri-demo/releases/download/tauri-demo-v0.1.31/latest.json"
+
+            # 构建请求对象
+            request = upgrade_link_models.TauriActionUploadRequest(
+                app_key=app_key,
+                latest_json_url=latest_json_url
+            )
+
+            # 调用接口
+            info, err = None, None
+            try:
+                info = client.tauri_action_upload(request)
+            except Exception as e:
+                err = e
+
+            # 打印结果
+            if err:
+                print("err: ", err)
+            else:
+                print("info: ", info)
+
+        except Exception as e:
+            print(f"测试过程中出错: {e}")
 
 if __name__ == '__main__':
     unittest.main()
