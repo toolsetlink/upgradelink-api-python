@@ -267,5 +267,76 @@ class TestUpgradeLinkClient(unittest.TestCase):
         except Exception as e:
             print(f"测试过程中出错: {e}")
 
+    def test_file_action_upload(self):
+        """测试file_action_upload"""
+        try:
+            # 创建客户端
+            client = Client(self.config)
+
+            # 设置请求参数
+            app_key = "Vun0EQy9RMQHK1oiODs_7Q"
+            version = "1.0.1"
+            url = "https://www.toolsetlink.com/user/user1.jpg"
+            prompt_upgrade_content = "升级提示"
+            # 构建请求对象
+            request = upgrade_link_models.FileActionUploadRequest(
+                app_key=app_key,
+                version=version,
+                url=url,
+                prompt_upgrade_content= prompt_upgrade_content
+            )
+
+            # 调用接口
+            info, err = None, None
+            try:
+                info = client.file_action_upload(request)
+            except Exception as e:
+                err = e
+
+            # 打印结果
+            if err:
+                print("err: ", err)
+            else:
+                print("info: ", info)
+
+        except Exception as e:
+            print(f"测试过程中出错: {e}")
+
+
+    def test_apk_action_upload(self):
+        """测试apk_action_upload"""
+        try:
+            # 创建客户端
+            client = Client(self.config)
+
+            # 设置请求参数
+            app_key = "isVZBUvkFhv6oHxk_X-D0Q"
+            version = "1.0.1"
+            url = "https://www.toolsetlink.com/user/user1.jpg"
+            prompt_upgrade_content = "升级提示"
+            # 构建请求对象
+            request = upgrade_link_models.ApkActionUploadRequest(
+                app_key=app_key,
+                version=version,
+                url=url,
+                prompt_upgrade_content= prompt_upgrade_content
+            )
+
+            # 调用接口
+            info, err = None, None
+            try:
+                info = client.apk_action_upload(request)
+            except Exception as e:
+                err = e
+
+            # 打印结果
+            if err:
+                print("err: ", err)
+            else:
+                print("info: ", info)
+
+        except Exception as e:
+            print(f"测试过程中出错: {e}")
+
 if __name__ == '__main__':
     unittest.main()

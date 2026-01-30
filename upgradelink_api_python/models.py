@@ -3247,13 +3247,19 @@ class FileActionUploadRequest(TeaModel):
     def __init__(
         self,
         app_key: str = None,
-        latest_json_url: str = None,
+        version: str = None,
+        url: str = None,
+        prompt_upgrade_content: str = None,
     ):
         self.app_key = app_key
-        self.latest_json_url = latest_json_url
+        self.version = version
+        self.url = url
+        self.prompt_upgrade_content = prompt_upgrade_content
 
     def validate(self):
         self.validate_required(self.app_key, 'app_key')
+        self.validate_required(self.version, 'version')
+        self.validate_required(self.url, 'url')
 
     def to_map(self):
         _map = super().to_map()
@@ -3263,16 +3269,24 @@ class FileActionUploadRequest(TeaModel):
         result = dict()
         if self.app_key is not None:
             result['appKey'] = self.app_key
-        if self.latest_json_url is not None:
-            result['latestJsonUrl'] = self.latest_json_url
+        if self.version is not None:
+            result['version'] = self.version
+        if self.url is not None:
+            result['url'] = self.url
+        if self.prompt_upgrade_content is not None:
+            result['promptUpgradeContent'] = self.prompt_upgrade_content
         return result
 
     def from_map(self, m: dict = None):
         m = m or dict()
         if m.get('appKey') is not None:
             self.app_key = m.get('appKey')
-        if m.get('latestJsonUrl') is not None:
-            self.latest_json_url = m.get('latestJsonUrl')
+        if m.get('version') is not None:
+            self.version = m.get('version')
+        if m.get('url') is not None:
+            self.url = m.get('url')
+        if m.get('promptUpgradeContent') is not None:
+            self.prompt_upgrade_content = m.get('promptUpgradeContent')
         return self
 
 
